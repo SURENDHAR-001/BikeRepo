@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface ProductRepository extends JpaRepository<Product,Integer> {
 
-	@Query(value="select * from details where hsn=?",nativeQuery=true)
+	@Query(value="select * from product_details where hsn=?",nativeQuery=true)
 	Product getPercentage(int hsn);
 
 	
